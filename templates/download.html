@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Download YouTube videos in MP4 format for free with our converter! Converting YouTube videos has never been so easy and fast.">
+    <meta name="keywords" content="youtube mp4, youtube mp4 converter, youtube mp4 downloader, youtube mp4 converter online, youtube mp4 converter free, youtube mp4 converter download, youtube mp4 converter app, youtube mp4 converter hd, youtube mp4 converter unblocked, youtube mp4 converter safe, youtube mp4 converter shark, youtube mp4 converter 1080p, youtube mp4 converter 720p, youtube mp4 converter 4k, youtube mp4 converter 320kbps, youtube mp4 converter 1080p online, youtube mp4 converter 1080p free, youtube mp4 converter 1080p download, youtube mp4 converter 1080p app, youtube mp4 converter 1080p hd, youtube mp4 converter 1080p unblocked, youtube mp4 converter 1080p safe, youtube mp4 converter 1080p shark, youtube mp4 converter 1080p 60fps, youtube mp4 converter 1080p 60fps online, youtube mp4 converter 1080p 60fps free, youtube mp4 converter 1080p 60fps download, youtube mp4 converter 1080p 60fps app, youtube mp4 converter 1080p 60fps hd, youtube mp4 converter 1080p 60fps unblocked, youtube mp4 converter 1080p 60fps safe, youtube mp4 converter 1080p 60fps shark">
+    <meta name="author" content="YouTube MP4 Downloader">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--Bootstrap CSS Link-->
+    <title>Download Video | YouTube MP4 Downloader</title>
+    <style>
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-4">Video Downloaded Succesfully</h1>
+            <a id="download_link" class="btn btn-primary btn-lg mt-3" href="{{ url_for('static', filename=video_title+'.mp4') }}" download="{{video_title}}.mp4">Download</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        document.getElementById("download_link").click();
+    </script>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Check if dark mode cookie exists
+        const darkModeCookie = getCookie('darkMode');
+        if (darkModeCookie !== '') {
+            document.body.classList.toggle('dark-mode', darkModeCookie === 'true');
+            darkModeToggle.checked = darkModeCookie === 'true';
+        }
+
+        darkModeToggle.addEventListener('change', () => {
+            const isChecked = darkModeToggle.checked;
+            document.body.classList.toggle('dark-mode', isChecked);
+            
+            // Set dark mode cookie
+            setCookie('darkMode', isChecked);
+        });
+
+        function setCookie(name, value) {
+            document.cookie = `${name}=${value}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+        }
+
+        function getCookie(name) {
+            const cookieName = `${name}=`;
+            const cookies = document.cookie.split(';');
+            
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.startsWith(cookieName)) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return '';
+        }
+    </script>
+</body>
+</html>

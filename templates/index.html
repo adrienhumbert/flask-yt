@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9732ZVZ34"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z9732ZVZ34');
+    </script>
+    <!-- Google Analytics -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MWR4V2BF');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Download YouTube videos in MP4 format for free with our converter! Converting YouTube videos has never been so easy and fast.">
+    <meta name="keywords" content="youtube mp4, youtube mp4 converter, youtube mp4 downloader, youtube mp4 converter online, youtube mp4 converter free, youtube mp4 converter download, youtube mp4 converter app, youtube mp4 converter hd, youtube mp4 converter unblocked, youtube mp4 converter safe, youtube mp4 converter shark, youtube mp4 converter 1080p, youtube mp4 converter 720p, youtube mp4 converter 4k, youtube mp4 converter 320kbps, youtube mp4 converter 1080p online, youtube mp4 converter 1080p free, youtube mp4 converter 1080p download, youtube mp4 converter 1080p app, youtube mp4 converter 1080p hd, youtube mp4 converter 1080p unblocked, youtube mp4 converter 1080p safe, youtube mp4 converter 1080p shark, youtube mp4 converter 1080p 60fps, youtube mp4 converter 1080p 60fps online, youtube mp4 converter 1080p 60fps free, youtube mp4 converter 1080p 60fps download, youtube mp4 converter 1080p 60fps app, youtube mp4 converter 1080p 60fps hd, youtube mp4 converter 1080p 60fps unblocked, youtube mp4 converter 1080p 60fps safe, youtube mp4 converter 1080p 60fps shark">
+    <meta name="author" content="YouTube MP4 Downloader">
+    <title>YouTube MP4 Downloader | Free Online YouTube Video Download Tool</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWR4V2BF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  
+    <!-- Dark Mode Toggle Button -->
+    <div class="text-right mt-2 mr-2">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+        <small class="ml-1">Dark Mode</small>
+    </div>
+
+    <div class="container mt-3">
+        <h1 class="text-center">YouTube MP4 Downloader</h1>
+        <form method="post" class="text-center">
+            <div class="form-group">
+                <label for="youtube_url">Enter YouTube URL</label>
+                <input type="text" class="form-control" name="youtube_url" id="youtube_url" placeholder="https://www.youtube.com/watch?v=XXXXXXXXXXX" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Download</button>
+        </form>
+
+        <!-- Ad div -->
+        <div class="mt-3 text-center">
+            <!-- Add your ad code or content here -->
+            <p>This is where your ad goes.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts (replace with the appropriate versions) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Check if dark mode cookie exists
+        const darkModeCookie = getCookie('darkMode');
+        if (darkModeCookie !== '') {
+            document.body.classList.toggle('dark-mode', darkModeCookie === 'true');
+            darkModeToggle.checked = darkModeCookie === 'true';
+        }
+
+        darkModeToggle.addEventListener('change', () => {
+            const isChecked = darkModeToggle.checked;
+            document.body.classList.toggle('dark-mode', isChecked);
+            
+            // Set dark mode cookie
+            setCookie('darkMode', isChecked);
+        });
+
+        function setCookie(name, value) {
+            document.cookie = `${name}=${value}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+        }
+
+        function getCookie(name) {
+            const cookieName = `${name}=`;
+            const cookies = document.cookie.split(';');
+            
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.startsWith(cookieName)) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return '';
+        }
+    </script>
+</body>
+</html>
